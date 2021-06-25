@@ -8,7 +8,7 @@ public with sharing class PDFViewerController {
             fileIDs.add(docLink.ContentDocumentId);
         }
 
-        // Filter PDF files 
+        // Filter PDF files 123
         List<ContentVersion> docs = [SELECT ContentDocumentId, FileExtension, Title 
             FROM ContentVersion WHERE ContentDocumentId IN : fileIDs AND FileExtension='pdf'];
         Map<ID, String> mapIdTitle = new Map<ID, String>();
